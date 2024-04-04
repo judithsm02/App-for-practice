@@ -90,25 +90,46 @@
         "viewPath": "practiceapp.practicej.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "clearControlAggregation": false,
+        "transition":"slide"
       },
       "routes": [
         {
-          "name": "RouteCarrier",
-          "pattern": ":?query:",
+          "name": "carrier",
+          "pattern": "",
+          "titleTarget": "",
+          "greedy":false,
           "target": [
-            "TargetCarrier"
+            "carrier"
           ]
+        },
+        {
+          "name":"flights"
+          "pattern": ""
         }
       ],
       "targets": {
-        "TargetCarrier": {
+        "carrier": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
           "viewId": "Carrier",
-          "viewName": "Carrier"
-        }
+          "viewName": "Carrier",
+          "viewLevel":1
+        },
+        
+          "flights":{
+            "viewType": "XML",
+            "viewId": "Flights",
+            "viewName": "Flights",
+            "transition":"slide",
+            "viewLevel":2,
+            "clearControlAggregation": false
+
+            
+          
+          }
+        
       }
     },
     "rootView": {
