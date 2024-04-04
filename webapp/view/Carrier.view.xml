@@ -5,8 +5,8 @@
  <Page id="carrierPage" title="{i18n>overviewPageTitle}">
     <headerContent>
         <Toolbar id="toolbar">
-            <Button text="New" press="onPress" type="Accept"></Button>
-            <Button text="Delete" press="onPress" type="Reject"></Button>
+            <Button id="button1" text="New" press="onPress" type="Accept"></Button>
+            <Button id="button2" text="Delete" press="onPress" type="Reject"></Button>
             
         </Toolbar>
     </headerContent>
