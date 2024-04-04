@@ -44,7 +44,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.122.1",
       "libs": {
@@ -91,51 +91,53 @@
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false,
-        "transition":"slide"
+        "transition": "slide",
+        "bypassed": {
+          "target": [
+            "notFound"
+          ]
+        }
       },
       "routes": [
         {
-          "name": "carrier",
+          "name": "overview",
           "pattern": "",
           "titleTarget": "",
-          "greedy":false,
+          "greedy": false,
           "target": [
-            "carrier"
+            "overview"
           ]
         },
         {
-          "name":"flights",
+          "name": "flights",
           "pattern": "carriers/{carrid}",
           "titleTarget": "",
           "greedy": false,
-          "target":
-            ["flights"]
-          }
-          
-        
+          "target": [
+            "flights"
+          ]
+        }
       ],
       "targets": {
-        "carrier": {
+        "overview": {
           "viewType": "XML",
           "transition": "slide",
-          "clearControlAggregation": false,
           "viewId": "Carrier",
           "viewName": "Carrier",
-          "viewLevel":1
+          "viewLevel": 1
         },
-        
-          "flights":{
-            "viewType": "XML",
-            "viewId": "Flights",
-            "viewName": "Flights",
-            "transition":"slide",
-            "viewLevel":2,
-            "clearControlAggregation": false
-
-            
-          
-          }
-        
+        "flights": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "Flights",
+          "viewName": "Flights",
+          "viewLevel": 2
+        },
+        "notFound": {
+          "viewId": "NotFound",
+          "viewName": "NotFound",
+          "transition": "show"
+        }
       }
     },
     "rootView": {
