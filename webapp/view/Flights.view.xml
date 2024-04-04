@@ -19,9 +19,16 @@
 
                 </ObjectHeader>
             </l:VerticalLayout>
+            
+             <Table id="idFlights" items="{path: 'to_Flight', sorter: {path: 'Carrid'}}" mode="SingleSelectMaster" growing="true" growingThreshold="10">
+                <headerToolbar>
+                    <Toolbar id="toolbar1">
+                        <Title id="title1" text="Flights" level="H2" />
+                    </Toolbar>
+                </headerToolbar>
+            </Table>
 
 
-<Text id="prova" text="HELLO WORLD"></Text>
         
       
         </content>
