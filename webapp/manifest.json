@@ -104,9 +104,15 @@
           ]
         },
         {
-          "name":"flights"
-          "pattern": ""
-        }
+          "name":"flights",
+          "pattern": "carriers/{carrid}",
+          "titleTarget": "",
+          "greedy": false,
+          "target":
+            ["flights"]
+          }
+          
+        
       ],
       "targets": {
         "carrier": {
