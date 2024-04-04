@@ -7,7 +7,7 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("practiceapp.practicej.controller.Flights", {  // sense posar aquest controller no funciona ni es veu res per pantalla. cal posar-lo perque es pugui veure tot. 
+        return Controller.extend("practiceapp.practicej.controller.Flights", {
             onInit: function () {
 
             },
