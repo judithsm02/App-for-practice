@@ -1,7 +1,28 @@
-<mvc:View controllerName="practiceapp.practicej.controller.Flights"
+<mvc:View xmlns:uxap="sap.uxap" controllerName="practiceapp.practicej.controller.Flights"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:cust="practiceapp.practicej.control">
+
+
+<Page id="idFlightsPage" navButtonPress="onNavBack" showNavButton="true" title="{Carrname}">
+        <content>
+            <l:VerticalLayout id="verticalLayout">
+                <ObjectHeader id="objectHeader" title="{Carrname}" number="" numberUnit="{Currcode}" titleHref="{Url}">
+                    <attributes>
+                        <ObjectAttribute id="objectAttribute1" text="{Carrid}" />
+                        <ObjectAttribute id="objectAttribute2" text="{Url}" />
+                    </attributes>
+                </ObjectHeader>
+            </l:VerticalLayout>
+
+
+<Text id="prova" text="HELLO WORLD"></Text>
+        
+        
+        </content>
     </Page>
+
+
+
 </mvc:View>

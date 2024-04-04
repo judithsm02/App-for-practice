@@ -8,8 +8,28 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("practiceapp.practicej.controller.Carrier", {
-            onInit: function () {
+            
+            getRouter: function (){
+                return sap.ui.core.UIComponent.getRouterFor(this);
+            },
 
-            }
+            onPress: function (oEvent){
+                var oItem=oEvent.getSource();
+                var oCtx=oItem.getBindingContext();
+                var sCarrid=oCtx.getProperty("Carrid")
+
+                this.getRouter().navTo("flights",{      //amb aixo ja es desplega la segona pantalla
+                    carrid:sCarrid
+                },false)
+            },
+
+
+
+
+
+                
+                
+
+            
         });
     });
