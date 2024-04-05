@@ -122,29 +122,22 @@ sap.ui.define([
                 oEntry.Seatsmax= sSeatMax;
                 oEntry.Seatsocc= sSeatOcc;
                 
-            
-            if(sCarrierName){
-                oModel.create("/Flight", oEntry, {
-                    succes:function(oData){
-                        oModel.refresh();
-                        
-                        // MessageBox.succes(oResourceBundle.getText("message.successCreateUni"));
-                        onCloseDialog();
-                    }.bind(this),
-
-                    error: function(oError){
-                        // MessageBox.error(oResourceBundle.getText("message.errorCreateUni"), {
-                    
-                        // });
-                    }
-                });
-
-            // }else{
-            //     // MessageBox.warning(oResourceBundle.getText("message.fieldsRequired"));
-            }
-               
-        },       
-       
+                if(sCarrierName){
+                    oModel.create("/UX_C_Flight_TP", oEntry, {
+                        success:function(oData){        // hi ha un error amb la DATE
+                            oModel.refresh();
+                            console.log(oEntry);
+                            this.onCloseDialog();
+                        }.bind(this),
+    
+                        error: function(oError){
+                            // Handle error
+                        }
+                    });
+    
+                }                   
+            },       
+           
 
 
 
