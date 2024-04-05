@@ -12,31 +12,29 @@
 			columnsL="1" columnsM="1" singleContainerFullSize="false">  
 
             <f:content> 
-                <Label text="{i18n>create_carriername}"></Label>
+                <Label text="{i18n>carriername}"></Label>
+                <Input id="carriername" type="Text" required="true"></Input>
                 
+                <Label text="{i18n>flightdate}"></Label>
+                <Input id="flightdate" type="Date" required="true"></Input>
+                
+                <Label text="{i18n>seatmax}"></Label>
+                <Input id="seatmax" type="Number" required="true"></Input>
+                
+                <Label text="{i18n>seatocc}"></Label>
+                <Input id="seatocc" type="Number" required="false"></Input>
+                
+                <Label text="{i18n>planeInfo}"></Label>
+                <Input id="planeInfo" type="Text" required="false" ></Input>              
             
             </f:content>   
+
+
 
 
         </f:SimpleForm>
     
     </VBox>
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
  <!-- ########################## BOTONS DEL FINAL DEL DIALEG  -->

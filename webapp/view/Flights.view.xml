@@ -13,7 +13,6 @@
                     <attributes>
                         <ObjectAttribute id="objectAttribute1" text="{Carrid}" />
                         <ObjectAttribute id="objectAttribute2" text="{Url}" />
-                        <ObjectAttribute id="prova2" text="HELLO WORLD"></ObjectAttribute>
 
                     </attributes>
 
@@ -46,9 +45,9 @@
                     <Column id="column6" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                         <Text id="text9" text="{i18n>planeInfo}"/>
                     </Column>  
-                     <Column id="column5" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                     <!-- <Column id="column5" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                         <Text id="text8" text="{i18n>bookaction}"/>             
-                    </Column> 
+                    </Column>  -->
                 </columns>
                 <items>
                     <ColumnListItem id="ColumnListItem1">

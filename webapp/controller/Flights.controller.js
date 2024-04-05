@@ -84,7 +84,9 @@ sap.ui.define([
 
             
         //############################## BOTO CREAR ####################### el boto es diu: New_onPress i el dialog, dialog_create
-            New_onPress: function () {
+            
+        New_onPress: function () 
+            {
                 if (!this.pDialog) {
                   this.pDialog = this.loadFragment({    // verifica si s'ha creat el dialeg. si s'ha creat carrega el fragment
                     name: "practiceapp.practicej.view.fragments.create"
@@ -94,10 +96,16 @@ sap.ui.define([
                   oDialog.open(); 
                 });
             },
+            onSave_CreateDialog: function()
+            {
+
+
+            },
 
 
 
-            onCloseDialog: function () {            //per tancar el dialeg si no es vol fer res
+            onCloseDialog: function () 
+            {            //per tancar el dialeg si no es vol fer res
                 this.byId("dialog_create").close();
             },
 
