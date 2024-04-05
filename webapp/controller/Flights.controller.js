@@ -82,11 +82,20 @@ sap.ui.define([
             /////////////////////////////// controllers dels dialogs i botons create y delete ///////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            New_onPress: function(oEvent)
-            {
-               this.pDialog=this.loadFragment({
-                name:dialogcreate
-               }) 
+            
+
+            New_onPress: function () {
+                if (!this.pDialog) {
+                  this.pDialog = this.loadFragment({
+                    name: "practiceapp.practicej.view.fragments.create"
+                  });
+                }
+                this.pDialog.then(function (oDialog) {
+                  oDialog.open();
+                });
+            },
+            onCloseDialog: function () {
+                this.byId("dialog_create").close();
             },
 
             Delete_onPress: function(oEvent)
