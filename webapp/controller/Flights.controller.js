@@ -96,8 +96,37 @@ sap.ui.define([
                   oDialog.open(); 
                 });
             },
-            onSave_CreateDialog: function()
+
+            // NO HE CREAT CAP VALUE HELP
+
+            onSave_CreateDialog: function() //BOTO DE QUAN LI DONES A SAVE EN EL DIALOG QUE JA ESTÀ OBERT
             {
+               var oResourceBundle=this.getView().getModel("i18n").getResourceBundle();
+
+            //Creamos esta variable para tenerla para luego poder acceder al modelo y a la vista a traves del oModel
+            var oModel= this.getView().getModel();  
+
+            // creem un objecte
+
+            var oEntry={};
+            
+            //  agafem els valors del dialog i els guardem en una nova variable
+            var sCarrierName = this.getView().byId("carriername").getValue();
+            var sFlightDate = this.getView().byId("flightdate").getValue();
+            var sSeatMax = this.getView().byId("seatmax").getValue();
+            var sSeatOcc= this.getView().byId("seatocc").getValue();
+
+            // el que va DARRERA l'o.Entry, ho he tret del metadata, concretament, dins la property de Flights, els parametres que em calien. HAN DE COINCIDIR.SINO ERROR!!
+                oEntry.Carrid=sCarrierName; 
+                oEntry.Fldate= sFlightDate;
+                oEntry.Seatsmax= sSeatMax;
+                oEntry.Seatsocc= sSeatOcc;
+                
+
+
+
+
+
 
 
             },

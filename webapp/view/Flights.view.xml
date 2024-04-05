@@ -42,9 +42,9 @@
                     <Column id="column4" hAlign="Right">
                         <Text id="text4" text="{i18n>seatocc}" />
                     </Column>
-                    <Column id="column6" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                    <!-- <Column id="column6" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                         <Text id="text9" text="{i18n>planeInfo}"/>
-                    </Column>  
+                    </Column>   -->
                      <!-- <Column id="column5" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                         <Text id="text8" text="{i18n>bookaction}"/>             
                     </Column>  -->
