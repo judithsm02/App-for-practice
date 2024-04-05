@@ -7,11 +7,41 @@
 
     <Dialog id="dialog_create"   draggable="true" stretch="{device/system/phone}"   showHeader="true" title="Create" >
 
-    <VBox id="idVBox" class="sapUiSmallMargin"></VBox>
+    <VBox id="idVBox" class="sapUiSmallMargin">
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="Add flights" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+			columnsL="1" columnsM="1" singleContainerFullSize="false">  
 
-        <Button id="save_create" text="Save new flight" icon="sap-icon://decline" press="onCloseDialog"> </Button>
+            <f:content> 
+                <Label text="{i18n>create_carriername}"></Label>
+                
+            
+            </f:content>   
 
-        <Button id="close_dialog" text="Close" icon="sap-icon://decline" press="onCloseDialog"> </Button>
+
+        </f:SimpleForm>
+    
+    </VBox>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ <!-- ########################## BOTONS DEL FINAL DEL DIALEG  -->
+         <Button id="save_create" text="Save new flight" icon="sap-icon://save" press="onSave_CreateDialog"> </Button>  <!--   GUARDAR -->
+         <Button id="close_dialog" text="Close" icon="sap-icon://decline" press="onCloseDialog"> </Button>              <!--   ESBORRAR -->
 
 
 
