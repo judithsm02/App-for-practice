@@ -7,6 +7,10 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
+            /////////////////////////////// different way to do the fullscreen app: https://github.com/judithsm02/flights.git ///////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
         return Controller.extend("practiceapp.practicej.controller.Flights", {
             onInit: function () {
 
@@ -14,7 +18,7 @@ sap.ui.define([
 
             },
 
-            getRouter: function() { //SI NO POSO AIXÒ, EM SURT QUE FGET ROUTER IS NOT A FUNCTION
+            getRouter: function() { //SI NO POSO AIXÒ, EM SURT QUE GET ROUTER IS NOT A FUNCTION
                 return sap.ui.core.UIComponent.getRouterFor(this);
 
             },
@@ -23,7 +27,7 @@ sap.ui.define([
             {  
 
                var sObjectPath =
-              "/UX_C_Carrier_TP('" + oEvent.getParameter("arguments").carrid + "')";
+              "/UX_C_Carrier_TP('" + oEvent.getParameter("arguments").carrid + "')"; //el carrid es la pattern que he definit al manifest.json
               this._bindView(sObjectPath);
 
             },  //FUNCIONA
@@ -50,19 +54,16 @@ sap.ui.define([
   
                 oElementBinding = this.getView().getElementBinding(); //FUNCIONA
   
-                // // No data for the binding 
-                // if (oElementBinding && !oElementBinding.getBoundContext()) {
-                //     this.getRouter().getTargets().display("notFound");
-                // }
+                // No data for the binding 
+                if (oElementBinding && !oElementBinding.getBoundContext()) {
+                    this.getRouter().getTargets().display("notFound");
+                }
             },
-
-
-
-        
+      
 
         
             
-        onNavBack: function () {
+        onNavBack: function () {  //fletxa per tirar enrere
             var oHistory, sPreviousHash;
         
             oHistory = sap.ui.core.routing.History.getInstance();
