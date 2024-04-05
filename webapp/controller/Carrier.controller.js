@@ -23,6 +23,11 @@ sap.ui.define([
                 },false)
             },
 
+            
+            New_onPress: function (){},
+            Delete_onPress: function(){}
+
+
 
 
 
