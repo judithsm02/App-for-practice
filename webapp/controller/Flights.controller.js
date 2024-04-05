@@ -117,19 +117,35 @@ sap.ui.define([
             var sSeatOcc= this.getView().byId("seatocc").getValue();
 
             // el que va DARRERA l'o.Entry, ho he tret del metadata, concretament, dins la property de Flights, els parametres que em calien. HAN DE COINCIDIR.SINO ERROR!!
-                oEntry.Carrid=sCarrierName; 
+                oEntry.Carrid=this.carrid; 
                 oEntry.Fldate= sFlightDate;
                 oEntry.Seatsmax= sSeatMax;
                 oEntry.Seatsocc= sSeatOcc;
                 
+            
+            if(sCarrierName){
+                oModel.create("/Flight", oEntry, {
+                    succes:function(oData){
+                        oModel.refresh();
+                        
+                        // MessageBox.succes(oResourceBundle.getText("message.successCreateUni"));
+                        onCloseDialog();
+                    }.bind(this),
 
+                    error: function(oError){
+                        // MessageBox.error(oResourceBundle.getText("message.errorCreateUni"), {
+                    
+                        // });
+                    }
+                });
 
+            // }else{
+            //     // MessageBox.warning(oResourceBundle.getText("message.fieldsRequired"));
+            }
+               
+        },       
+       
 
-
-
-
-
-            },
 
 
 
