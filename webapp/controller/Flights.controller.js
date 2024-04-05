@@ -1,5 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/Fragment"
+
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -74,6 +76,32 @@ sap.ui.define([
             } else {
             this.getRouter().navTo("overview", true /*no history*/);
             }
-        }
+        },
+
+
+            /////////////////////////////// controllers dels dialogs i botons create y delete ///////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            New_onPress: function(oEvent)
+            {
+               this.pDialog=this.loadFragment({
+                name:dialogcreate
+               }) 
+            },
+
+            Delete_onPress: function(oEvent)
+            {
+
+            }
+    
+            
+
+
+
         });
+
+
+         
+
+
     });

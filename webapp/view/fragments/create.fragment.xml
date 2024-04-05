@@ -1,0 +1,18 @@
+<core:Fragment fragmentName="dialogcreate"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+
+
+    <Dialog id="dialogcreate"   draggable="true" stretch="{device/system/phone}"   showHeader="true" title="Create" >
+
+    <VBox id="idVBox" class="sapUiSmallMargin"></VBox>
+
+
+
+    </Dialog>
+
+
+
+</core:Fragment>

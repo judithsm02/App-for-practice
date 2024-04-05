@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+
+
+    <Dialog id="dialogdelete"   draggable="true" stretch="{device/system/phone}"   showHeader="true" >
+
+
+    </Dialog>
+
+
+
+
+</core:FragmentDefinition>

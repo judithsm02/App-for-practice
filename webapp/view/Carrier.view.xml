@@ -3,13 +3,7 @@
     xmlns="sap.m">
 
  <Page id="carrierPage" title="{i18n>overviewPageTitle}">
-    <headerContent>
-        <Toolbar id="toolbar">
-            <Button id="button1" text="New" press="New_onPress" type="Accept"></Button>
-            <Button id="button2" text="Delete" press="Delete_onPress" type="Reject"></Button>
-            
-        </Toolbar>
-    </headerContent>
+   
 
     
             <Table id="carrierTable" items="{/UX_C_Carrier_TP}">
