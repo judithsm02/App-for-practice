@@ -16,6 +16,7 @@
                         <Text id="text2" text="{i18n>columnId}" />
                     </Column>
                 </columns>
+                
                  <items>
                      <ColumnListItem id="columnListItem1" press="onPress" type="Navigation">
                         <cells>

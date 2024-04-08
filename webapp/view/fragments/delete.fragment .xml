@@ -7,7 +7,7 @@
 
     <Dialog id="dialogdelete"   draggable="true" stretch="{device/system/phone}"   showHeader="true" >
 
-
+<Text id="text1" text="hello world" />
     </Dialog>
 
 

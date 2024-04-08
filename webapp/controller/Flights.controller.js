@@ -118,31 +118,41 @@ sap.ui.define([
                         success: function() {
 
                             this.onCloseDialog();
-                            
+
                         },
                         error: function(oError) {
                             // Handle error
                         }
                     });
-                },
+            },
             
 
             onCloseDialog: function () 
             {            //per tancar el dialeg si no es vol fer res
                 this.byId("dialog_create").close();
             },
+        
 
 
 
         //############################## BOTO ESBORRAR #######################
 
-            Delete_onPress: function(oEvent)
-            {
+      
 
-            }
-    
-            
+        onPress_Delete: function (oEvent){
+        
 
+            if (!this.pDialog) {
+                this.pDialog = this.loadFragment({    // verifica si s'ha creat el dialeg. si s'ha creat carrega el fragment
+                  name: "practiceapp.practicej.view.fragments.delete"
+                });
+              }
+              this.pDialog.then(function (oDialog) { //si no s'ha creat el dialeg, s'obre el dialeg. 
+                oDialog.open(); 
+              });
+              
+          
+        },
 
 
         });

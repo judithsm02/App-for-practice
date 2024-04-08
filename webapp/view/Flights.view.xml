@@ -26,7 +26,7 @@
                     <Toolbar id="toolbar1">
                         <Title id="title1" text="Flights" level="H2" />
                                 <Button id="button1" text="New" press="New_onPress" type="Accept" iconFirst="true" icon="sap-icon://add-activity"></Button>
-                                <Button id="button2" text="Delete" press="Delete_onPress" type="Reject" iconFirst="true" icon="sap-icon://delete"></Button>
+                                <!-- <Button id="button2" text="Delete" press="Delete_onPress" type="Reject" iconFirst="true" icon="sap-icon://delete"></Button> -->
                     </Toolbar>
                 </headerToolbar>
                  <columns>
