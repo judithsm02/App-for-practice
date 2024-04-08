@@ -7,7 +7,7 @@ sap.ui.define([
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, MessageToast) {
         "use strict";
 
             /////////////////////////////// different way to do the fullscreen app: https://github.com/judithsm02/flights.git ///////////////////////////////////////////////////////
@@ -111,11 +111,14 @@ sap.ui.define([
                         Seatsmax: this.getView().byId("seatmax").getValue(),
                         Seatsocc: this.getView().byId("seatocc").getValue(),
 
-                    };
+                    };   
+
     
                     oModel.create("/UX_C_Flight_TP", oEntry, {
                         success: function() {
-                            MessageToast.show(oResourceBundle.getText("flightCreatedMessage"));
+
+                            this.onCloseDialog();
+                            
                         },
                         error: function(oError) {
                             // Handle error
