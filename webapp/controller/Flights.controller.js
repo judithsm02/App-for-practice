@@ -1,6 +1,7 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    "sap/m/MessageToast"
 
 ],
     /**
@@ -101,46 +102,27 @@ sap.ui.define([
 
             onSave_CreateDialog: function() //BOTO DE QUAN LI DONES A SAVE EN EL DIALOG QUE JA ESTÀ OBERT
             {
-               var oResourceBundle=this.getView().getModel("i18n").getResourceBundle();
-
-            //Creamos esta variable para tenerla para luego poder acceder al modelo y a la vista a traves del oModel
-            var oModel= this.getView().getModel();  
-
-            // creem un objecte
-
-            var oEntry={};
-            
-            //  agafem els valors del dialog i els guardem en una nova variable
-            var sCarrierName = this.getView().byId("carriername").getValue();
-            var sFlightDate = this.getView().byId("flightdate").getValue();
-            var sSeatMax = this.getView().byId("seatmax").getValue();
-            var sSeatOcc= this.getView().byId("seatocc").getValue();
-
-            // el que va DARRERA l'o.Entry, ho he tret del metadata, concretament, dins la property de Flights, els parametres que em calien. HAN DE COINCIDIR.SINO ERROR!!
-                oEntry.Carrid=this.carrid; 
-                oEntry.Fldate= sFlightDate;
-                oEntry.Seatsmax= sSeatMax;
-                oEntry.Seatsocc= sSeatOcc;
-                
-                if(sCarrierName){
-                    oModel.create("/UX_C_Flight_TP", oEntry, {
-                        success:function(oData){        // hi ha un error amb la DATE
-                            oModel.refresh();
-                            console.log(oEntry);
-                            this.onCloseDialog();
-                        }.bind(this),
+                    var oModel = this.getView().getModel();  
+                    var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
     
-                        error: function(oError){
+                    var oEntry = {
+                        Carrid: this.getView().getBindingContext().getProperty("Carrid"),
+                        Fldate: this.getView().byId("flightdate").getValue(),
+                        Seatsmax: this.getView().byId("seatmax").getValue(),
+                        Seatsocc: this.getView().byId("seatocc").getValue(),
+
+                    };
+    
+                    oModel.create("/UX_C_Flight_TP", oEntry, {
+                        success: function() {
+                            MessageToast.show(oResourceBundle.getText("flightCreatedMessage"));
+                        },
+                        error: function(oError) {
                             // Handle error
                         }
                     });
-    
-                }                   
-            },       
-           
-
-
-
+                },
+            
 
             onCloseDialog: function () 
             {            //per tancar el dialeg si no es vol fer res
