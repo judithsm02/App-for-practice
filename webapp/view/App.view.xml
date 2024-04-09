@@ -3,6 +3,13 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     
-    <App id="app">
+    <App id="App"> 
+    
+    <!-- aquesta majuscula coincideix amb el contorl ID del routing -->
+   
+
+     
+
     </App>
 </mvc:View>
+

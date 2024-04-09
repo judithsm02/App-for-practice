@@ -6,6 +6,7 @@
 
 
 <Page id="idFlightsPage" navButtonPress="onNavBack" showNavButton="true" title="{Carrname}">
+   
         <content>
             <l:VerticalLayout id="verticalLayout">
                 <ObjectHeader id="objectHeader" title="{Carrname}" number="" numberUnit="{Currcode}" titleHref="{Url}" >
@@ -21,7 +22,7 @@
 
    
 
-             <Table id="idFlights" items="{path: 'to_Flight', sorter: {path: 'Carrid'}}" mode="SingleSelectMaster" growing="true" growingThreshold="10">
+        <Table id="idFlights" items="{path: 'to_Flight', sorter: {path: 'Carrid'}}" mode="SingleSelectMaster" growing="true" growingThreshold="10" >
                 <headerToolbar>
                     <Toolbar id="toolbar1">
                         <Title id="title1" text="Flights" level="H2" />
@@ -50,7 +51,7 @@
                     </Column>  -->
                 </columns>
                 <items>
-                    <ColumnListItem id="ColumnListItem1">
+                    <ColumnListItem id="ColumnListItem1" press="onPress" type="Navigation">
                         <cells>
                         <ObjectIdentifier id="objectIdentifier1" title="{Carrid}" text="{Carrid}" />
                             <Text id="text5" text="{path: 'Fldate', type: 'sap.ui.model.type.Date'}" />

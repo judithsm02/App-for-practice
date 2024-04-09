@@ -89,9 +89,8 @@
         "async": true,
         "viewPath": "practiceapp.practicej.view",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "App",
         "clearControlAggregation": false,
-        "transition": "slide",
         "bypassed": {
           "target": [
             "notFound"
@@ -99,7 +98,16 @@
         }
       },
       "routes": [
+        
         {
+          "name": "sometiles",
+          "pattern": "",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "sometiles"
+          ]
+        }, {
           "name": "overview",
           "pattern": "",
           "titleTarget": "",
@@ -117,22 +125,32 @@
             "flights"
           ]
         }
+       
       ],
       "targets": {
+       
+        "sometiles": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "Tiles",
+          "viewName": "Tiles",
+          "viewLevel": 1
+        },
         "overview": {
           "viewType": "XML",
           "transition": "slide",
           "viewId": "Carrier",
           "viewName": "Carrier",
-          "viewLevel": 1
+          "viewLevel": 2
         },
         "flights": {
           "viewType": "XML",
           "transition": "slide",
           "viewId": "Flights",
           "viewName": "Flights",
-          "viewLevel": 2
+          "viewLevel": 3
         },
+       
         "notFound": {
           "viewId": "NotFound",
           "viewName": "NotFound",

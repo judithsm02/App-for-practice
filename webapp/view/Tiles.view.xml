@@ -1,0 +1,30 @@
+<mvc:View xmlns:uxap="sap.uxap" controllerName="practiceapp.practicej.controller.Tiles"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:cust="practiceapp.practicej.control">
+
+    <Page >
+        <content>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Flights app"  press="onPress"
+            frameType="OneByHalf" subheader="Subtitle">
+
+            <TileContent>
+                <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+            </TileContent>
+            </GenericTile>
+
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Flights statistics"  press="onPress"
+            frameType="OneByHalf" subheader="Subtitle">
+
+            <TileContent>
+                <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+            </TileContent>
+            </GenericTile>
+
+
+        </content>
+        </Page>
+
+
+</mvc:View>
