@@ -9,7 +9,6 @@
 
 <!-- ##############    SMART FILTER   ######################## -->
 
-
 <smartFilterBar:SmartFilterBar id="SmartFilterFlights"
                 entitySet="UX_C_Connection_TPType" 
                  enableBasicSearch="true"
@@ -20,16 +19,15 @@
                     <!-- ******************* FILTROS *********************************** -->
 
                     <smartFilterBar:ControlConfiguration
-                        id="Connid"
-                        key="country"
-                        index="0"
-                        groupId="_BASIC"
+                        id="Country"
+                        key="Country"
                         label="Carrid"
                         visibleInAdvancedArea="true"
                         preventInitialDataFetchInValueHelpDialog="false"
                         hasValueHelpDialog="false"
                         mandatory="notMandatory"
                     />
+                    
                 </smartFilterBar:controlConfiguration>
 
 </smartFilterBar:SmartFilterBar>
@@ -57,41 +55,39 @@
   <!-- es fa perque la taula creixi pero el filter bar es quedi fixe -->
         <FlexItemData
             growFactor="1"
-            baseSize="0%"
             id="1.4"
         />
  </smartTable:layoutData>
 
 
 
-
-    <Table id="TableConnections"  
+ 
+     <Table id="TableConnections"  
                     mode="SingleSelectMaster"
-                    growing="true"
                     growingThreshold="20"
                     growingScrollToLoad="true"
                     selectionChange="onPressObject"
                     >
 
-        
 
         <columns> 
             <Column id="Connection_ID_Column" hAlign="Begin"> 
-                <Text id="Connection_ID_Text" text="Connection ID"></Text>
+                <Text id="Connection_ID_Text" text="Connection ID"/>
             </Column>
+          
             
             <Column id="Carrier_ID_Column" hAlign="Begin"> 
-                <Text id="Carrier_ID_Text" text="Carrier ID"></Text>
+                <Text id="Carrier_ID_Text" text="Carrier ID"/>
             </Column>
 
              <Column id="CityFrom_Column" hAlign="Begin"> 
-                <Text id="CityFrom_Text" text="City From"></Text>
+                <Text id="CityFrom_Text" text="City From"/>
             </Column>
 
              <Column id="CityTo_Column" hAlign="Begin"> 
-                <Text id="CityTo_Text" text="City From"></Text>
+                <Text id="CityTo_Text" text="City From"/>
             </Column>           
-        </columns>   
+         </columns>  
 
         <items>
             <ColumnListItem id="ColumnListItem1">
@@ -102,10 +98,9 @@
                     <Text id="colum4" text="{Cityto}"></Text>
                 </cells>
             </ColumnListItem>
-        </items>
-
+        </items> 
     
-    </Table>
+    </Table> 
 
 
 </smartTable:SmartTable>
