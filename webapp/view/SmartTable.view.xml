@@ -1,12 +1,49 @@
-<mvc:View xmlns:uxap="sap.uxap" controllerName="practiceapp.practicej.controller.SmartTable"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"
-    xmlns:l="sap.ui.layout"
-    xmlns:cust="practiceapp.practicej.control">
+<mvc:View xmlns:table="sap.ui.table" xmlns:uxap="sap.uxap" controllerName="practiceapp.practicej.controller.SmartTable"
+  xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+>
 
-    <Page >
-      
-        </Page>
+<smartFilterBar:SmartFilterBar id="SmartFilterFlights"> </smartFilterBar:SmartFilterBar>
+
+
+<smartTable:SmartTable id="smarttable" entitySet="UX_C_Connection_TPType" smartFilterId="SmartFilterFlights" tableType="ResponsiveTable"
+enableExport="true" beforeExport="onBeforeExport" useVariantManagement="false" useTablePersonalisation="true" header="More about flights - Connections" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true"
+demandPopin="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true" requestAtLeastFields="Carrid, Connid, Deptime">
+
+  <smartTable:layoutData> 
+  <!-- es fa perque la taula creixi pero el filter bar es quedi fixe -->
+        <FlexItemData
+            growFactor="1"
+            baseSize="0%"
+            id="1.4"
+        />
+ </smartTable:layoutData>
+
+
+
+
+    <Table id="TableConnections"  
+                    mode="SingleSelectMaster"
+                    growing="true"
+                    growingThreshold="20"
+                    growingScrollToLoad="true"
+                    selectionChange="onPressObject">
+
+        <headerToolbar> <Toolbar id="toolbar"> <Title id="ToolBar_Title" text="More tools"> </Title> </Toolbar></headerToolbar> 
+
+        <columns> 
+            <Column id="Connection_ID" hAlign="Begin"> </Column>
+            
+        </columns>
+    
+    
+    </Table>
+
+
+</smartTable:SmartTable>
 
 
 </mvc:View>
