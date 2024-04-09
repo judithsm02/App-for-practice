@@ -1,14 +1,16 @@
 sap.ui.define(
     [
-        "sap/ui/core/mvc/Controller",
-        "sap/ui/core/UIComponent"
+        "sap/ui/core/UIComponent",
+        'sap/ui/core/mvc/Controller',
+        'sap/ui/model/odata/v2/ODataModel'
 
     ],
-    function(BaseController) {
+    function(BaseController, controller,UIComponent,ODataModel) {
       "use strict";
   
       return BaseController.extend("practiceapp.practicej.controller.SmartTable", {
         onInit: function() {
+          
           
         },
       

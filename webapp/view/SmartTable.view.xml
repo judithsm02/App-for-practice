@@ -6,12 +6,52 @@
 	xmlns:smartTable="sap.ui.comp.smarttable"
 >
 
-<smartFilterBar:SmartFilterBar id="SmartFilterFlights"> </smartFilterBar:SmartFilterBar>
+
+<!-- ##############    SMART FILTER   ######################## -->
 
 
-<smartTable:SmartTable id="smarttable" entitySet="UX_C_Connection_TPType" smartFilterId="SmartFilterFlights" tableType="ResponsiveTable"
-enableExport="true" beforeExport="onBeforeExport" useVariantManagement="false" useTablePersonalisation="true" header="More about flights - Connections" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true"
-demandPopin="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true" requestAtLeastFields="Carrid, Connid, Deptime">
+<smartFilterBar:SmartFilterBar id="SmartFilterFlights"
+                entitySet="UX_C_Connection_TPType" 
+                 enableBasicSearch="true"
+                 
+>
+
+ <smartFilterBar:controlConfiguration>
+                    <!-- ******************* FILTROS *********************************** -->
+
+                    <smartFilterBar:ControlConfiguration
+                        id="Connid"
+                        key="country"
+                        index="0"
+                        groupId="_BASIC"
+                        label="Carrid"
+                        visibleInAdvancedArea="true"
+                        preventInitialDataFetchInValueHelpDialog="false"
+                        hasValueHelpDialog="false"
+                        mandatory="notMandatory"
+                    />
+                </smartFilterBar:controlConfiguration>
+
+</smartFilterBar:SmartFilterBar>
+
+
+<!-- ##############    SMART TABLE   ######################## -->
+<smartTable:SmartTable id="smarttable" 
+                entitySet="UX_C_Connection_TPType" 
+                smartFilterId="SmartFilterFlights" 
+                tableType="ResponsiveTable"
+                enableExport="true" 
+                beforeExport="onBeforeExport" 
+                useVariantManagement="false" 
+                useTablePersonalisation="true" 
+                header="More about flights - Connections" 
+                showRowCount="true"
+                demandPopin="true" 
+                class="sapUiResponsiveContentPadding" 
+                enableAutoColumnWidth="true" 
+                requestAtLeastFields="Carrid, Connid, Deptime"  
+                items="{/UX_C_Connection_TP}" 
+                beforeRebindTable="onBeforeRebindTable">
 
   <smartTable:layoutData> 
   <!-- es fa perque la taula creixi pero el filter bar es quedi fixe -->
@@ -30,15 +70,40 @@ demandPopin="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="
                     growing="true"
                     growingThreshold="20"
                     growingScrollToLoad="true"
-                    selectionChange="onPressObject">
+                    selectionChange="onPressObject"
+                    >
 
-        <headerToolbar> <Toolbar id="toolbar"> <Title id="ToolBar_Title" text="More tools"> </Title> </Toolbar></headerToolbar> 
+        
 
         <columns> 
-            <Column id="Connection_ID" hAlign="Begin"> </Column>
+            <Column id="Connection_ID_Column" hAlign="Begin"> 
+                <Text id="Connection_ID_Text" text="Connection ID"></Text>
+            </Column>
             
-        </columns>
-    
+            <Column id="Carrier_ID_Column" hAlign="Begin"> 
+                <Text id="Carrier_ID_Text" text="Carrier ID"></Text>
+            </Column>
+
+             <Column id="CityFrom_Column" hAlign="Begin"> 
+                <Text id="CityFrom_Text" text="City From"></Text>
+            </Column>
+
+             <Column id="CityTo_Column" hAlign="Begin"> 
+                <Text id="CityTo_Text" text="City From"></Text>
+            </Column>           
+        </columns>   
+
+        <items>
+            <ColumnListItem id="ColumnListItem1">
+                <cells>
+                    <ObjectIdentifier id="ObjectIdentifier1" text="{Connid}"></ObjectIdentifier>
+                    <Text id="colum2" text="{Carrid}"></Text>
+                    <Text id="colum3" text="{Cityfrom}"></Text>
+                    <Text id="colum4" text="{Cityto}"></Text>
+                </cells>
+            </ColumnListItem>
+        </items>
+
     
     </Table>
 
