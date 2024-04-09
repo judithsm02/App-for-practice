@@ -1,6 +1,8 @@
 sap.ui.define(
     [
-        "sap/ui/core/mvc/Controller"
+        "sap/ui/core/mvc/Controller",
+        "sap/ui/core/UIComponent"
+
     ],
     function(BaseController) {
       "use strict";
@@ -14,6 +16,19 @@ sap.ui.define(
           return sap.ui.core.UIComponent.getRouterFor(this);
 
       },
+      onPressFlights: function() {    
+        this.getRouter().navTo("overview");
+      },
+
+      onPressSmarttable: function() {    
+        this.getRouter().navTo("smarttable");
+      },
+
+
+      
+
+      
+
 
       });
     }

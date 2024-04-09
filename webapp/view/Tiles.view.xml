@@ -6,21 +6,11 @@
 
     <Page >
         <content>
-            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Flights app"  press="onPress"
-            frameType="OneByHalf" subheader="Subtitle">
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Flights app"  press="onPressFlights"
+            frameType="OneByHalf" subheader="Flights"  > </GenericTile>
 
-            <TileContent>
-                <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
-            </TileContent>
-            </GenericTile>
-
-             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Flights statistics"  press="onPress"
-            frameType="OneByHalf" subheader="Subtitle">
-
-            <TileContent>
-                <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
-            </TileContent>
-            </GenericTile>
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Smart Table"  press="onPressSmarttable"
+            frameType="OneByHalf" subheader="Smart Table"  > </GenericTile>
 
 
         </content>

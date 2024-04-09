@@ -1,0 +1,12 @@
+<mvc:View xmlns:uxap="sap.uxap" controllerName="practiceapp.practicej.controller.SmartTable"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:cust="practiceapp.practicej.control">
+
+    <Page >
+      
+        </Page>
+
+
+</mvc:View>

@@ -109,7 +109,7 @@
           ]
         }, {
           "name": "overview",
-          "pattern": "",
+          "pattern": "/Flights",
           "titleTarget": "",
           "greedy": false,
           "target": [
@@ -123,6 +123,15 @@
           "greedy": false,
           "target": [
             "flights"
+          ]
+        },
+        {
+          "name": "smarttable",
+          "pattern": "/SmartTable",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "smarttable"
           ]
         }
        
@@ -155,8 +164,16 @@
           "viewId": "NotFound",
           "viewName": "NotFound",
           "transition": "show"
+        },
+        "smarttable":{
+          "viewType":"XML",
+          "viewId":"SmartTable",
+          "viewName":"SmartTable",
+          "transition":"slide"
         }
       }
+    
+      
     },
     "rootView": {
       "viewName": "practiceapp.practicej.view.App",
