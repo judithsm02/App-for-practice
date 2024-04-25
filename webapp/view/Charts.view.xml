@@ -1,0 +1,8 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:mc="sap.suite.ui.microchart" xmlns:layout="sap.ui.layout" controllerName="practiceapp.practicej.controller.Charts" height="100%">
+
+	<Panel headerText="Booking Charts">
+	</Panel>
+
+	<sap.ui.comp.smartchart:SmartChart xmlns:sap.ui.comp.smartchart="sap.ui.comp.smartchart" width="100%" direction="Column" fitContainer="true" enableAutoBinding="true" noData="No data available." id="chart" entitySet="UX_C_Booking_TP" chartBindingPath="{/#UX_C_Booking_TPType/Carrid/@sap:label}{/#UX_C_Booking_TPType/Connid/@sap:label}{/#UX_C_Booking_TPType/Fldate/@sap:label}{/#UX_C_Booking_TPType/Cancelled/@sap:label}" fieldGroupIds="{/#UX_C_Booking_TPType/Connid/@sap:label}" header="hello" showDetailsButton="true"/>
+
+</mvc:View>

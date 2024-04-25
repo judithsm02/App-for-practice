@@ -20,16 +20,16 @@ sap.ui.define(
         this.getRouter().navTo("overview");
       },
 
+    
       onPressSmarttable: function() {    
         this.getRouter().navTo("smarttable");
-      },
-
+      },  
+      
+      onPressCharts: function() {    
+        this.getRouter().navTo("charts");
+      },    
 
       
-
-      
-
-
       });
     }
   );

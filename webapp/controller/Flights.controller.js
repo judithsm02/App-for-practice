@@ -17,7 +17,10 @@ sap.ui.define([
         return Controller.extend("practiceapp.practicej.controller.Flights", {
             onInit: function () {
 
-                this.getRouter().getRoute("flights").attachPatternMatched(this._onObjectMatched, this)
+                this.getRouter().getRoute("flights").attachPatternMatched(this._onObjectMatched, this);
+                var oHashObject=new sap.ui.core.routing.HashChanger();
+                var oSemanticObject=oHashObject.getHash().split("-")[1];
+                console.log(oSemanticObject); 
 
             },
 

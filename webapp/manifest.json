@@ -133,6 +133,14 @@
           "target": [
             "smarttable"
           ]
+        },{
+          "name": "charts",
+          "pattern": "/charts",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "charts"
+          ]
         }
        
       ],
@@ -169,6 +177,12 @@
           "viewType":"XML",
           "viewId":"SmartTable",
           "viewName":"SmartTable",
+          "transition":"slide"
+        },
+        "charts":{
+          "viewType":"XML",
+          "viewId":"Charts",
+          "viewName":"Charts",
           "transition":"slide"
         }
       }
