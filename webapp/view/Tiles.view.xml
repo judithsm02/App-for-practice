@@ -12,8 +12,12 @@
              <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Smart Table"  press="onPressSmarttable"
             frameType="OneByHalf" subheader="Smart Table"  > </GenericTile>
 
-    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Charts"  press="onPressCharts"
-                frameType="OneByHalf" subheader="Smart Table"  > </GenericTile>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Charts"  press="onPressCharts"
+                frameType="OneByHalf" subheader="Charts"  > </GenericTile>
+
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Wizard"  press="onPressWizard"
+            frameType="OneByHalf" subheader="Wizard"  > </GenericTile>
+
 
 
 

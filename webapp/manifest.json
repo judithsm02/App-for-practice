@@ -141,6 +141,14 @@
           "target": [
             "charts"
           ]
+        },{
+          "name": "wizard",
+          "pattern": "/wizard",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "wizard"
+          ]
         }
        
       ],
@@ -184,6 +192,12 @@
           "viewId":"Charts",
           "viewName":"Charts",
           "transition":"slide"
+        },
+        "wizard":{
+          "viewId": "Wizard",
+          "viewType": "HTML",
+          "viewName": "Wizard",
+          "transition":"flip"
         }
       }
     

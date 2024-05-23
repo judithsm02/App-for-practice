@@ -10,6 +10,8 @@ sap.ui.define(
   
       return BaseController.extend("practiceapp.practicej.controller.SmartTable", {
         onInit: function() {
+
+          
           
           
         },

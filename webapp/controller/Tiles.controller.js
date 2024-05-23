@@ -28,6 +28,10 @@ sap.ui.define(
       onPressCharts: function() {    
         this.getRouter().navTo("charts");
       },    
+      
+      onPressWizard: function() {    
+        this.getRouter().navTo("wizard");
+      },    
 
       
       });
