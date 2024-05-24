@@ -3,24 +3,20 @@
     "name": "Sarah",
     "surname": "Gomez",
     "DNI": "38438667J",
-    "Carrid": "AA",
-    "Connid": 17,
+    "Carrid": "",
     "Flid": 2,
     "AdditionalComm":"",
-    "Genre":"",
-    "Age":""
+    "Genre":""
 },
 {
     "Passid": "53454",
     "name": "Julia",
     "surname": "Jimenez",
     "DNI": "34567563M",
-    "Carrid": "AZ",
-    "Connid": 555,
-    "Flid": 9,
+    "Carrid": "",
+    "Flid": "",
     "AdditionalComm":"",
-    "Genre":"",
-    "Age":""
+    "Genre":""
 
 }
 ]

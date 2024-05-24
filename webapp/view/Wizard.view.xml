@@ -19,9 +19,7 @@
 						<MessageStrip 	class="sapUiSmallMarginBottom"
 										text="{i18n>SearchcarridInfo}"
 										showIcon="true"/>
-							<Toolbar>
-								<SearchField width="100%" search=".onSearcWizard" />
-							</Toolbar>
+								<ComboBox id="ComboBoxCarrier" width="100%" />
 					</WizardStep>
 
 					<!-- segundo step del wizard -->
@@ -34,7 +32,7 @@
 										columnsL="1" columnsM="1" singleContainerFullSize="false">  
 										<f:content> 
 											    <Label text="{i18n>Passid}"></Label>
-												<Input id="passengerID" type="Number" required="true"></Input>
+												<Input id="passengerID" type="Number" required="true" placeholder="Enter ID with length equal to 5" valueState="{/passengerIDState}" ></Input>
 												
 												<Label text="{i18n>name}"></Label>
 												<Input id="passengername" type="Text" required="true"></Input>
@@ -43,14 +41,13 @@
 												<Input id="passengersurname" type="Text" required="true"></Input>
 												
 												<Label text="{i18n>DNI}"></Label>
-												<Input id="passengerDNI" type="Number" required="true"></Input>
-												            
+												<Input id="passengerDNI" type="Number" required="true" placeholder="Enter 6 digits and a capital letter" valueState="{/passengerDNIState}" ></Input>	            
 										</f:content>   
 									</f:SimpleForm>
 							</VBox>        
 					</WizardStep>
 
-					<!-- tercero step del wizard -->
+					<!-- tercer step del wizard -->
 					<WizardStep id="AdditionalInfoPassanger" title="Additional info. Passenger" validated="true">
 						<MessageStrip 	class="sapUiSmallMarginBottom"
 										text="{i18n>AdditInfoTitle}"
@@ -69,6 +66,7 @@
 										</items>
 									</SegmentedButton>
 								</HBox>
+							
 		
 							<Label text="{i18n>AdditionalComments}"></Label>
 							<Input id="additionalcomments" type="Text" required="false" ></Input>              

@@ -31,7 +31,7 @@ sap.ui.define(
       
       onPressWizard: function() {    
         this.getRouter().navTo("wizard");
-      },    
+      }  
 
       
       });
