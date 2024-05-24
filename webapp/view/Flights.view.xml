@@ -14,15 +14,12 @@
                     <attributes>
                         <ObjectAttribute id="objectAttribute1" text="{Carrid}" />
                         <ObjectAttribute id="objectAttribute2" text="{Url}" />
-
                     </attributes>
 
                 </ObjectHeader>
             </l:VerticalLayout>
 
-   
-
-        <Table id="idFlights" items="{path: 'to_Flight', sorter: {path: 'Carrid'}}" mode="SingleSelectMaster" growing="true" growingThreshold="10" >
+         <Table id="idFlights" items="{path: 'to_Flight', sorter: {path: 'Carrid'}}" mode="SingleSelectMaster" growing="true" growingThreshold="10" >
                 <headerToolbar>
                     <Toolbar id="toolbar1">
                         <Title id="title1" text="Flights" level="H2" />

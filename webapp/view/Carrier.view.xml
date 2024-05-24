@@ -13,7 +13,7 @@
                     </Column>
                    
                    <Column id="column2" minScreenWidth="tablet" demandPopin="true">
-                        <Text id="text2" text="{i18n>columnId}" />
+                        <Text id="text2" text="{i18n>columnName}" />
                     </Column>
                 </columns>
                 

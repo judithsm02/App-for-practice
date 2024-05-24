@@ -1,0 +1,86 @@
+<mvc:View controllerName="practiceapp.practicej.controller.Wizard"
+    xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+
+
+<NavContainer id="NavContainerId">
+	<pages>
+		<Page id="wizardContentPage" >
+				<Wizard
+				id="CreatePassengerWizard"
+				finishButtonText="Finish"
+				class="sapUiResponsivePadding--header sapUiResponsivePadding--content">
+					<!-- primer step del wizard -->
+					<WizardStep id="SearchCarrid" title="Search a Carrier by ID" validated="true">
+						<MessageStrip 	class="sapUiSmallMarginBottom"
+										text="{i18n>SearchcarridInfo}"
+										showIcon="true"/>
+							<Toolbar>
+								<SearchField width="100%" search=".onSearcWizard" />
+							</Toolbar>
+					</WizardStep>
+
+					<!-- segundo step del wizard -->
+					<WizardStep id="CreatePassenger" title="Fill the new passenger information" validated="true">
+						<MessageStrip 	class="sapUiSmallMarginBottom"
+										text="{i18n>CreatePassanger}"
+										showIcon="true"/>
+							   <VBox id="idVBox" class="sapUiSmallMargin">
+									<f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="Add flights" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+										columnsL="1" columnsM="1" singleContainerFullSize="false">  
+										<f:content> 
+											    <Label text="{i18n>Passid}"></Label>
+												<Input id="passengerID" type="Number" required="true"></Input>
+												
+												<Label text="{i18n>name}"></Label>
+												<Input id="passengername" type="Text" required="true"></Input>
+												
+												<Label text="{i18n>surname}"></Label>
+												<Input id="passengersurname" type="Text" required="true"></Input>
+												
+												<Label text="{i18n>DNI}"></Label>
+												<Input id="passengerDNI" type="Number" required="true"></Input>
+												            
+										</f:content>   
+									</f:SimpleForm>
+							</VBox>        
+					</WizardStep>
+
+					<!-- tercero step del wizard -->
+					<WizardStep id="AdditionalInfoPassanger" title="Additional info. Passenger" validated="true">
+						<MessageStrip 	class="sapUiSmallMarginBottom"
+										text="{i18n>AdditInfoTitle}"
+										showIcon="true"/>
+								<HBox
+									alignItems="Center"
+									justifyContent="Center"
+									width="100%">
+									<SegmentedButton
+										width="320px"
+										selectionChange="GenreFromSegmented">
+										<items>
+											<SegmentedButtonItem text="Male"/>
+											<SegmentedButtonItem text="Female"/>
+											<SegmentedButtonItem text="Other"/>
+										</items>
+									</SegmentedButton>
+								</HBox>
+		
+							<Label text="{i18n>AdditionalComments}"></Label>
+							<Input id="additionalcomments" type="Text" required="false" ></Input>              
+					</WizardStep>
+
+
+
+
+				</Wizard>
+		</Page>
+	</pages>
+
+</NavContainer>
+
+</mvc:View>
