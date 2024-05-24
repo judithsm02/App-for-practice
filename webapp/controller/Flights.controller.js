@@ -64,12 +64,7 @@ sap.ui.define([
                 if (oElementBinding && !oElementBinding.getBoundContext()) {
                     this.getRouter().getTargets().display("notFound");
                 }
-            },
-
-           
-      
-
-        
+            },      
             
         onNavBack: function () {  //fletxa per tirar enrere
             var oHistory, sPreviousHash;
@@ -83,7 +78,6 @@ sap.ui.define([
             this.getRouter().navTo("overview", true /*no history*/);
             }
         },
-
 
             /////////////////////////////// controllers dels dialogs i botons create y delete ///////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

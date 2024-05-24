@@ -6,3 +6,4 @@ entity PASSENGERS {
         AdditionalComm : String(300);
         Genre          : String(50);
 }
+
