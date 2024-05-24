@@ -15,15 +15,23 @@
 				finishButtonText="Finish"
 				class="sapUiResponsivePadding--header sapUiResponsivePadding--content">
 					<!-- primer step del wizard -->
-					<WizardStep id="SearchCarrid" title="Search a Carrier by ID" validated="true">
+					<WizardStep id="SearchCarrid" title="Search a Carrier by ID" validated="true"> 
+					<!-- validate = false: esconde el boton de ir al siguiente wizard. Asi obliga a rellenar todos los campos -->
 						<MessageStrip 	class="sapUiSmallMarginBottom"
 										text="{i18n>SearchcarridInfo}"
 										showIcon="true"/>
-								<ComboBox id="ComboBoxCarrier" width="100%" />
+							<HBox justifyContent="SpaceAround">
+								<ComboBox id="ComboBoxCarrier" selectedItem="onSelectedItem">
+									<core:Item key="{Carrid}" text="AA" />
+									<core:Item key="{Carrid}" text="DL" />
+
+								</ComboBox>
+							</HBox>
+
 					</WizardStep>
 
 					<!-- segundo step del wizard -->
-					<WizardStep id="CreatePassenger" title="Fill the new passenger information" validated="true">
+					<WizardStep id="CreatePassenger" title="Fill the new passenger information" validated="false" activate="additionalInfoValidation">
 						<MessageStrip 	class="sapUiSmallMarginBottom"
 										text="{i18n>CreatePassanger}"
 										showIcon="true"/>
@@ -32,7 +40,7 @@
 										columnsL="1" columnsM="1" singleContainerFullSize="false">  
 										<f:content> 
 											    <Label text="{i18n>Passid}"></Label>
-												<Input id="passengerID" type="Number" required="true" placeholder="Enter ID with length equal to 5" valueState="{/passengerIDState}" ></Input>
+												<Input id="passengerID" type="Number" required="true" placeholder="Enter ID with length equal to 5" valueState="{/passengerIDState}" liveChange="AdditionalInfoPassanger"></Input>
 												
 												<Label text="{i18n>name}"></Label>
 												<Input id="passengername" type="Text" required="true"></Input>
@@ -41,14 +49,14 @@
 												<Input id="passengersurname" type="Text" required="true"></Input>
 												
 												<Label text="{i18n>DNI}"></Label>
-												<Input id="passengerDNI" type="Number" required="true" placeholder="Enter 6 digits and a capital letter" valueState="{/passengerDNIState}" ></Input>	            
+												<Input id="passengerDNI" type="Number" required="true" placeholder="Enter 6 digits and a capital letter" valueState="{/passengerDNIState}" liveChange="AdditionalInfoPassanger"></Input>	            
 										</f:content>   
 									</f:SimpleForm>
 							</VBox>        
 					</WizardStep>
 
 					<!-- tercer step del wizard -->
-					<WizardStep id="AdditionalInfoPassanger" title="Additional info. Passenger" validated="true">
+					<WizardStep id="AdditionalInfoPassanger" title="Additional info. Passenger" validated="false">
 						<MessageStrip 	class="sapUiSmallMarginBottom"
 										text="{i18n>AdditInfoTitle}"
 										showIcon="true"/>

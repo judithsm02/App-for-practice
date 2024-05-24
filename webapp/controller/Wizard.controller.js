@@ -20,34 +20,21 @@ sap.ui.define(
 				passengerIDState: "Error", //pone en rojo y error los campos de introducir dni y id desde el principio
 				passengerDNIState: "Error"
 			});
-			this.getView().setModel(this.model);        
-        
+      this.getView().setModel(this.model);         
       },
 
-      onSearchWizard:function()
+      additionalInfoValidation:function()
       {
-        
+        var PassengerID=this.byId("Passid");
+
+        console.log(PassengerID);
       }
 
+      
 
 
-      // discardProgress: function () {
-      //   this._wizard.discardProgress(this.byId("SearchCarrid"));
-  
-      //   var clearContent = function (content) {
-      //     for (var i = 0; i < content.length; i++) {
-      //       if (content[i].setValue) {
-      //         content[i].setValue("");
-      //       }
-  
-      //       if (content[i].getContent) {
-      //         clearContent(content[i].getContent());
-      //       }
-      //     }
-      //   };
-      //   clearContent(this._wizard.getSteps());
-      // }
-    
+
+     
 
     });
   }
